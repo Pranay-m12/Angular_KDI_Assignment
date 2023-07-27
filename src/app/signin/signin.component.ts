@@ -9,8 +9,8 @@ import { ILogin } from './sign';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
- 
-  constructor( private router: Router,private _courseService: CourseService){}
+
+  constructor(private router: Router, private _courseService: CourseService) { }
   detail: ILogin[] = [];
   errorMessage: any;
   ngOnInit(): void {
@@ -20,28 +20,32 @@ export class SigninComponent {
 
     this.subs();
   }
-   subs() : void {
+  subs(): void {
     this._courseService.getCreds().subscribe({
       next: details => {
         this.detail = details;
-        
+
       },
       error: err => this.errorMessage = err
     })
   }
 
-  onsubmit(){
-    
-   
-     const userName: HTMLInputElement = document.getElementById('email') as HTMLInputElement;
-     const userPw: HTMLInputElement = document.getElementById('password') as HTMLInputElement;
-     
- 
-     if (userName.value == "details.getCreds()" && userPw.value.length != 0) {
-       this.router.navigateByUrl('/home')
-     } else {
-         alert('Error on login Please Try Again');
-     }
-   }
-  
+  onsubmit() {
+
+
+    const userName: HTMLInputElement = document.getElementById('email') as HTMLInputElement;
+    const userPw: HTMLInputElement = document.getElementById('password') as HTMLInputElement;
+
+    console.log(userName.value+userPw.value);
+    console.log(this.detail);
+    if (this.detail.filter(user => user.email === userName.value && user.password === userPw.value).at(0)) {
+
+      this.router.navigateByUrl('/home')
+    }
+    else {
+      alert('Error on login Please Try Again');
+    }
+
+  }
+
 }

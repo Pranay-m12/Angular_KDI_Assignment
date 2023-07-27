@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./course-desc.component.css']
 })
 export class CourseDescComponent implements OnInit {
-  
+
 
   course!: ICourses[]
   constructor(private CourseService: CourseService, private route: ActivatedRoute, private router: Router) { }
@@ -21,7 +21,7 @@ export class CourseDescComponent implements OnInit {
     }
     console.log(this.course);
     this.invokeStripe();
-    
+
   }
   invokeStripe() {
 
@@ -50,23 +50,23 @@ export class CourseDescComponent implements OnInit {
 
             console.log(stripeToken);
 
-            alert('Payment has been successfull!');            
+            alert('Payment has been successfull!');
 
-           
+
 
 
           },
-         
+
         });
-        
+
       };
 
 
-      
+
 
       window.document.body.appendChild(script);
 
-     
+
 
 
 
@@ -75,10 +75,10 @@ export class CourseDescComponent implements OnInit {
 
   }
 
-  sucessenroll(){
-   
+  sucessenroll() {
+
     this.router.navigateByUrl('/video')
-    
+
   }
   paymentHandler: any = null;
 
@@ -94,7 +94,7 @@ export class CourseDescComponent implements OnInit {
 
       key: this.stripeAPIKey,
 
-      locale: 'auto',
+      locale: 'INR',
 
       token: function (stripeToken: any) {
 
@@ -105,12 +105,12 @@ export class CourseDescComponent implements OnInit {
 
       },
 
-     
+
 
     });
-    
-    
-    
+
+
+
 
     // alert('Enroll SucessFull')
     paymentHandler.open({

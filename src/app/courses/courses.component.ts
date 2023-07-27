@@ -100,12 +100,17 @@ export class CoursesComponent {
     this.searchedCourses= this.RatingCourses;
     this.searchedCourses = this.searchedCourses.sort((a:ICourses, b:ICourses)=> a.coursePrice - b.coursePrice);
   }
+  Sortbyt(){
+    this.RatingCourses=this.courses;
+    this.searchedCourses= this.RatingCourses;
+    this.searchedCourses = this.searchedCourses.sort((a:ICourses, b:ICourses)=> b.courseDuration - a.courseDuration);
+  }
   resetFilter(){
    console.log('Function Hitss')
     this.searchedCourses=this.courses;
   }
   handleFilter(filter: string) {
     console.log("handle filter called")
-    this.filterClicked.emit(filter);
+    this.filterCourses(filter);
   }
 } 

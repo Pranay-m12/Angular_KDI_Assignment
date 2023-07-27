@@ -18,4 +18,9 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it(`should have a year '2023'`,()=>{
+    const fixture = TestBed.createComponent(HomeComponent);
+    const app = fixture.componentInstance;
+    expect(app.year).toEqual(2023);
+  })
 });

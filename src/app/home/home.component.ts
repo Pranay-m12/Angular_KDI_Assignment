@@ -33,7 +33,7 @@ export class HomeComponent {
   constructor(private _courseService: CourseService) {
 
   }
-
+ year: number=2023;
   isSeacrhed() {
     this.issearch = !this.issearch;
 
@@ -47,6 +47,7 @@ export class HomeComponent {
     this.subs();
   }
    subs() : void {
+    //surscribing of Courses
     this._courseService.getCourses().subscribe({
       next: courses => {
         this.courses = courses;
@@ -81,9 +82,5 @@ export class HomeComponent {
       c.courseName.toLocaleLowerCase().includes(searchBy));
 
   }
-  SortbyR(){
-    this.RatingCourses=this.courses;
-    this.searchedCourses= this.RatingCourses;
-    this.searchedCourses = this.searchedCourses.sort((a:ICourses, b:ICourses)=> b.courseRating - a.courseRating);
-  }
+  
 }

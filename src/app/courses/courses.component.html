@@ -9,10 +9,26 @@
        <br><br>
         <h6 class="text-center">Sorting</h6>
         <br>
-        <button  class="btn btn-primary text-center" (click)="SortbyRd()">High Rating</button><br><br>
-        <button class="btn btn-primary" (click)="SortbyRa()">Low Rating</button><br><br>
-        <button class="btn btn-primary" (click)="SortbyPd()">High Price</button><br><br>
-        <button class="btn btn-primary" (click)="SortbyPa()">Low Price</button><br><br>
+        <div class="dropdown">
+          <span><button  class="btn btn-primary text-center"> Rating</button><br><br></span>
+          <div class="dropdown-content">
+            <button  class="btn btn-primary" (click)="SortbyRd()">High Rating</button><br><br>
+            <button class="btn btn-primary" (click)="SortbyRa()">Low Rating</button><br><br>
+          </div>
+        </div>
+        <!-- <button  class="btn btn-primary text-center" (click)="SortbyRd()">High Rating</button><br><br>
+        <button class="btn btn-primary" (click)="SortbyRa()">Low Rating</button><br><br> -->
+        <div class="dropdown">
+          <span><button  class="btn btn-primary text-center"> Price</button><br><br></span>
+          <div class="dropdown-content">
+            <button class="btn btn-primary" (click)="SortbyPd()">High Price</button><br><br>
+            <button class="btn btn-primary" (click)="SortbyPa()">Low Price</button><br><br>
+          </div>
+        </div>
+        <!-- <button class="btn btn-primary" (click)="SortbyPd()">High Price</button><br><br>
+        <button class="btn btn-primary" (click)="SortbyPa()">Low Price</button><br><br> -->
+        <div class="dropdown">
+        <button class="btn btn-primary" (click)="Sortbyt()">Max Duration</button><br><br> </div>
         <button class="btn btn-primary" (click)="resetFilter()">Reset Filter</button><br><br>
         <h6 class="text-center">Categories</h6>
         <br>
@@ -38,6 +54,7 @@
                   <small class="text-body-secondary">Price ₹{{c.coursePrice}}</small><br>
                   <small class="text-body-secondary">Rating : {{c.courseRating}}/5</small><br>
                   <small class="text-body-secondary"><b>Category : {{c.courseCategory}}</b></small><br>
+                  <small class="text-body-secondary"><b>Duration : {{c.courseDuration}} Hrs</b></small><br>
                   <small class="text-body-secondary"><button class="btn btn-primary" [routerLink]="['/view',c.courseId]">Enroll Now</button></small>
                 </div>
               </div>

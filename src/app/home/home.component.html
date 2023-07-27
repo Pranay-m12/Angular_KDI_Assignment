@@ -1,4 +1,6 @@
+<!-- Navbar  -->
 <app-navbar (filterClicked)="filterCourses($event)"></app-navbar>
+
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -17,13 +19,10 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <!-- <br>
-      <div class="seacrhbar"> <input class="form-control me-2" type="search" placeholder="Search" style="width: 20%;" [(ngModel)]="searchTxt" />
-      <br>
-     <button (click)="SortbyR()">Sort By Rating</button> <br>
-      <br> --> <br><br>
-      <h3>Top Rated Courses</h3> <br>
+       <br><br>
+      <h3 style="margin-left: 10px;">Top Selling Courses</h3> <br>
       <div class="row row-cols-1 row-cols-md-4 g-4" style="margin-left: 0%; margin-right: 0%;">
+        <!-- slice will display only first 4 items -->
         <div class="col" *ngFor="let c of searchedCourses | slice:0:4">
           <div class="card h-100">
             <img id="catlog_img" [src]=c.courseImg class="card-img-top" alt="...">
@@ -35,12 +34,14 @@
               <small class="text-body-secondary">Price ₹{{c.coursePrice}}</small><br>
               <small class="text-body-secondary">Rating : {{c.courseRating}}/5</small><br>
               <small class="text-body-secondary"><b>Category : {{c.courseCategory}}</b></small><br>
+              <small class="text-body-secondary"><b>Duration : {{c.courseDuration}} Hrs</b></small><br>
               <small class="text-body-secondary"><button class="btn btn-primary" [routerLink]="['/view',c.courseId]">Enroll Now</button></small>
             </div>
           </div>
         </div>
       </div>
       <br><br>
+      <!-- content -->
       <section class="hero-section">
         <div class="container" style="background-color: rgb(250, 249, 246);">
           <div class="row" style="margin: 20px;">
@@ -58,7 +59,7 @@
       </section>
       <br><br>
       <footer style="background-color: #f1f1f1; padding: 20px; text-align: center;">
-        <p>&copy; 2023 Your Company. All rights reserved.</p>
+        <p>&copy; {{year}} Your Company. All rights reserved.</p>
       </footer>
       
 

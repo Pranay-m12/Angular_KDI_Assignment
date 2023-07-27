@@ -8,6 +8,7 @@
         "coursePrice":499,
         "courseRating":4.2,
         "courseSName":"Python",
+        "courseDuration":34,
         "courseVidLink":"https://www.youtube.com/embed/x7X9w_GIm1s"
         
       },
@@ -18,7 +19,7 @@
         "courseCategory":"Design",
         "courseImg":"assets/images/co9.PNG",
         "coursePrice":499,
-        "courseRating":3.5,
+        "courseRating":3.5,"courseDuration":14,
         "courseSName":"Web Design",
         "courseVidLink":"https://www.youtube.com/embed/x7X9w_GIm1s"
       },
@@ -31,6 +32,7 @@
         "courseSName":"Java",
         "courseRating":3.9,
         "coursePrice":299,
+        "courseDuration":39,
         "courseVidLink":"https://www.youtube.com/embed/x7X9w_GIm1s"
       }, {
         "courseId":4,
@@ -40,7 +42,7 @@
         "courseSName":"Finance",
         "courseImg":"assets/images/co4.PNG",
         "coursePrice":499,
-        "courseRating":4.9,
+        "courseRating":4.9,"courseDuration":24,
         "courseVidLink":"https://www.youtube.com/embed/x7X9w_GIm1s"
       },{
         "courseId":7,
@@ -49,7 +51,7 @@
         "courseCategory":"IT",
         "courseSName":"React",
         "courseRating":4.1,
-        "courseImg":"assets/images/co3.PNG",
+        "courseImg":"assets/images/co3.PNG","courseDuration":4,
         "coursePrice":699,
         "courseVidLink":"https://www.youtube.com/embed/x7X9w_GIm1s"
       }, {
@@ -61,6 +63,7 @@
         "coursePrice":299,
         "courseRating":4.2,
         "courseSName":"Manager",
+        "courseDuration":124,
         "courseVidLink":"https://www.youtube.com/embed/x7X9w_GIm1s"
       },
       {
@@ -71,7 +74,7 @@
         "courseImg":"assets/images/co6.PNG",
         "coursePrice":499,
         "courseRating":4.1,
-        "courseSName":"Analyst",
+        "courseSName":"Analyst","courseDuration":8,
         "courseVidLink":"https://www.youtube.com/embed/x7X9w_GIm1s"
       },
       {
@@ -82,7 +85,7 @@
         "courseImg":"assets/images/co7.PNG",
         "coursePrice":499,
         "courseRating":3.8,
-        "courseSName":"Pshology",
+        "courseSName":"Pshology","courseDuration":40,
         "courseVidLink":"https://www.youtube.com/embed/x7X9w_GIm1s"
       },
       {
@@ -93,7 +96,7 @@
         "courseImg":"assets/images/co8.PNG",
         "coursePrice":499,
         "courseRating":4.2,
-        "courseSName":"Java",
+        "courseSName":"Java","courseDuration":34,
         "courseVidLink":"https://www.youtube.com/embed/x7X9w_GIm1s"
       },
       
@@ -105,7 +108,7 @@
         "courseImg":"assets/images/c10.PNG",
         "coursePrice":499,
         "courseRating":2.5,
-        "courseSName":"WordPress",
+        "courseSName":"WordPress","courseDuration":12,
         "courseVidLink":"https://www.youtube.com/embed/x7X9w_GIm1s"
       }
   ]
