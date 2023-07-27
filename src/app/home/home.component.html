@@ -1,0 +1,64 @@
+<app-navbar (filterClicked)="filterCourses($event)"></app-navbar>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img id="carousel" src="assets/images/c1.PNG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img id="carousel" src="assets/images/c2.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- <br>
+      <div class="seacrhbar"> <input class="form-control me-2" type="search" placeholder="Search" style="width: 20%;" [(ngModel)]="searchTxt" />
+      <br>
+     <button (click)="SortbyR()">Sort By Rating</button> <br>
+      <br> --> <br><br>
+      <h3>Top Rated Courses</h3> <br>
+      <div class="row row-cols-1 row-cols-md-4 g-4" style="margin-left: 0%; margin-right: 0%;">
+        <div class="col" *ngFor="let c of searchedCourses | slice:0:4">
+          <div class="card h-100">
+            <img id="catlog_img" [src]=c.courseImg class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{c.courseName}}</h5>
+              <p class="card-text">{{c.courseDesc}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">Price ₹{{c.coursePrice}}</small><br>
+              <small class="text-body-secondary">Rating : {{c.courseRating}}/5</small><br>
+              <small class="text-body-secondary"><b>Category : {{c.courseCategory}}</b></small><br>
+              <small class="text-body-secondary"><button class="btn btn-primary" [routerLink]="['/view',c.courseId]">Enroll Now</button></small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <section class="hero-section">
+        <div class="container" style="background-color: rgb(250, 249, 246);">
+          <div class="row" style="margin: 20px;">
+            <div class="col-md-6">
+              <h1>Learn New Skills Online</h1>
+              <p>Discover thousands of courses taught by industry experts. Enhance your knowledge and skills
+                at your own pace.</p>
+              <a routerLink = '/course' routerLinkActive="active" class="btn btn-primary">Start Learning</a>
+            </div>
+            <div class="col-md-6">
+              <img src="assets/images/main.PNG" style="height: 400px; width: 400px; margin: 10px;" alt="Hero Image" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </section>
+      <br><br>
+      <footer style="background-color: #f1f1f1; padding: 20px; text-align: center;">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+      </footer>
+      
+

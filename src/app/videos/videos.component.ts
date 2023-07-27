@@ -1,0 +1,16 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-videos',
+  templateUrl: './videos.component.html',
+  styleUrls: ['./videos.component.css']
+})
+export class VideosComponent {
+ 
+ confirm(){
+  const script = window.document.createElement('script');
+   script.onload = () =>  {
+    alert('Enroll Sucess');
+   }
+ }
+}

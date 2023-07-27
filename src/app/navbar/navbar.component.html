@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgb(206, 185, 185);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img id="logo" src="assets/images/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="!hideabout" routerLink = '/about' routerLinkActive="active">AboutUs</a>
+          </li>
+          <li class="nav-item dropdown" *ngIf="!hideCategory">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" (click)="handleFilter('ALL')">All</a></li>
+              <li><a class="dropdown-item" (click)="handleFilter('IT')">IT & Devlopment</a></li>
+              <li><a class="dropdown-item" (click)="handleFilter('Design')">Design</a></li>
+              <li><a class="dropdown-item" (click)="handleFilter('PersonalDevelopment')">PersonalDevelopment</a></li>
+              <li><a class="dropdown-item" (click)="handleFilter('Finance')">Finance</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink = '/contract' routerLinkActive="active">ContractUs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink = '/course' routerLinkActive="active">Courses</a>
+          </li>
+         
+        </ul>
+        <form class="d-flex" role="search">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" routerLink = '/login' routerLinkActive="active">Sign Up</a>
+            </li>
+          </ul>
+        
+        </form>
+        
+     
+         
+        
+      </div>
+    </div>
+  </nav>

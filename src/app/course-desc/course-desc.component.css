@@ -1,0 +1,18 @@
+#logo{
+    height: 55px;
+    width: 60px;
+}
+.poster{
+    height: 400px;
+    background-color: antiquewhite;
+    position: relative;
+}
+
+.content{
+    height: 340px;
+    width: 700px;
+    
+    position: absolute;
+    margin: 30px;
+
+}

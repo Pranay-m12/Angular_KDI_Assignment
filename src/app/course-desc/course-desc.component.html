@@ -1,0 +1,62 @@
+<app-navbar [hideCategory]="true"></app-navbar>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8">
+      <!-- Course Title -->
+      <h1>{{course[0].courseName}}</h1>
+      <br><br>
+      <!-- Course Image -->
+      <!-- <iframe  width="720" height="300"
+      src="https://www.youtube.com/embed/x7X9w_GIm1s"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+      </iframe> -->
+      <img [src]=course[0].courseImg  style="width: 720px; height: 300px;" alt="">
+<br><br>
+      <!-- Course Overview -->
+      <h3>Course Overview</h3>
+      <p>{{course[0].courseDesc}}</p>
+
+      <!-- Course Features -->
+      <h3>Course Features</h3>
+      <ul>
+        <li>Learn the basics of {{course[0].courseSName}}</li>
+        <li>Master advanced techniques in {{course[0].courseSName}}</li>
+        <li>Hands-on projects and exercises</li>
+        <li>Access to downloadable resources</li>
+        <li>Quizzes and assessments</li>
+        <li>Certificate of completion</li>
+      </ul>
+
+      <!-- Target Audience -->
+      <h3>Who is this course for?</h3>
+      <p>Beginners who have never exprienced before.Programmers switching languages to {{course[0].courseSName}}.Intermediate {{course[0].courseSName}} who want to level up their skills!</p>
+
+    </div>
+    <div class="col-md-4">
+      <!-- Course Instructor -->
+      <div class="card">
+       
+        <div class="card-body">
+          <h5 class="card-title">Instructor Name</h5>
+          <h6>Mark Shelder</h6>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+
+      <!-- Course Price and Enroll Button -->
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Price: ₹{{course[0].coursePrice}}</h5>
+          <p class="card-text">Enroll now and start learning!</p>
+          <!-- <a   routerLink = '/video' routerLinkActive="active" class="btn btn-primary">Enroll Now</a> -->
+          <a   (click)="makePayment(course[0].coursePrice)" class="btn btn-primary">Enroll Now</a>
+        </div>
+      </div>
+      <br>
+      <h5 class="card-title"><button class="btn btn-primary"  routerLink = '/course' routerLinkActive="active">Back</button></h5>
+    </div>
+  </div>
+</div>
+<br>
+  <footer style="background-color: #f1f1f1; padding: 20px; text-align: center;">
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+  </footer>
